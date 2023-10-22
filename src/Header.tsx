@@ -52,7 +52,7 @@ function Header({setQuery}:{setQuery:(query:string)=>void}) {
               <Nav.Link href="./posts">Posts</Nav.Link>
               <Nav.Link href="./users">Users</Nav.Link>
             </Nav>
-          </Nav.Link>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </form>
