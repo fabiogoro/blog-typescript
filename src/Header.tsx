@@ -26,7 +26,7 @@ function Header({setQuery}:{setQuery:(query:string)=>void}) {
     <form onSubmit={submitQuery}>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="./">
             Blog
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -49,10 +49,10 @@ function Header({setQuery}:{setQuery:(query:string)=>void}) {
               <FontAwesomeIcon icon={faSearch} />
             </button>
             <Nav className="me-auto justify-content-end">
-              <Nav.Link href="/posts">Posts</Nav.Link>
-              <Nav.Link href="/users">Users</Nav.Link>
+              <Nav.Link href="./posts">Posts</Nav.Link>
+              <Nav.Link href="./users">Users</Nav.Link>
             </Nav>
-          </Navbar.Collapse>
+          </Nav.Link>
         </Container>
       </Navbar>
     </form>
