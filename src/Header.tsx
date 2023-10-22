@@ -49,8 +49,8 @@ function Header({setQuery}:{setQuery:(query:string)=>void}) {
               <FontAwesomeIcon icon={faSearch} />
             </button>
             <Nav className="me-auto justify-content-end">
-              <Nav.Link href="./posts">Posts</Nav.Link>
-              <Nav.Link href="./users">Users</Nav.Link>
+              <Nav.Link href="/blog-typescript/posts">Posts</Nav.Link>
+              <Nav.Link href="/blog-typescript/users">Users</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -6,9 +6,9 @@ import Users from './Users';
 
 function App() {
   const router = createBrowserRouter([
-    { path: '/', element: <Posts /> },
-    { path: '/posts', element: <Posts /> },
-    { path: '/users', element: <Users /> },
+    { path: '/blog-typescript?', element: <Posts /> },
+    { path: '/blog-typescript?/posts', element: <Posts /> },
+    { path: '/blog-typescript?/users', element: <Users /> },
   ])
 
   return (

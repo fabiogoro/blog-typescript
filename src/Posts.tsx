@@ -54,7 +54,7 @@ function Posts() {
                 {p.title}
               </Card.Title>
               <Card.Text>
-                Written by: <a href={`./users?selectedUser=${p.user.id}`}>{p.user.name}</a>
+                Written by: <a href={`/blog-typescript/users?selectedUser=${p.user.id}`}>{p.user.name}</a>
               </Card.Text>
               <Card.Text>
                 {p.body}
