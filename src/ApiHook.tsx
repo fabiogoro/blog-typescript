@@ -1,15 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useCallback, useReducer } from 'react';
+
+function reducer<T>(state:T, action:{newState:T}){
+  return action.newState
+}
 
 function useApi<T>(url: string): T[] {
-  const [state, setState] = useState([])
+  const [state, dispatch] = useReducer(reducer<T[]>, [])
+
+  const doFetch = useCallback(async ()=>{
+    const responseJson = await fetch(url)
+    dispatch({newState: await responseJson.json()})
+  }, [url])
 
   useEffect(() => {
-    async function doFetch() {
-      const responseJson = await fetch(url)
-      setState(await responseJson.json())
-    }
     doFetch()
-  }, [url])
+  }, [doFetch])
 
   return state
 }
